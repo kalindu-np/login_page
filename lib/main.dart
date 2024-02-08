@@ -38,13 +38,19 @@ class _HomePageState extends State<HomePage> {
       //),
       body: SafeArea(
           child: ListView(
-        padding: const EdgeInsets.all(20),
+        padding: const EdgeInsets.all(40),
         children: [
-          Image.asset("assets/images/clogo.png"),
+          Image.asset("assets/images/clogo1.png"),
+          const SizedBox(
+            height: 130,
+          ),
           const Text(
             "Welcome back",
             style: TextStyle(
                 fontSize: 22, color: Colors.pink, fontWeight: FontWeight.bold),
+          ),
+          const SizedBox(
+            height: 20,
           ),
           TextFormField(
               controller: emailController,
@@ -64,6 +70,9 @@ class _HomePageState extends State<HomePage> {
                 ),
                 hintText: ("Password"),
               )),
+          const SizedBox(
+            height: 20,
+          ),
           Row(
             children: [
               Checkbox(
@@ -83,6 +92,9 @@ class _HomePageState extends State<HomePage> {
                   ))
             ],
           ),
+          const SizedBox(
+            height: 50,
+          ),
           ElevatedButton(
               onPressed: () {},
               style: ElevatedButton.styleFrom(backgroundColor: Colors.pink),
@@ -90,33 +102,40 @@ class _HomePageState extends State<HomePage> {
                 "Login",
                 style: TextStyle(color: Colors.white, fontSize: 20),
               )),
-          const Center(child: Text("Or Login with")),
+          const SizedBox(
+            height: 20,
+          ),
+          const Align(child: Text("Or Login with")),
+          const SizedBox(
+            height: 20,
+          ),
           Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Image.asset(
+                "assets/images/FBlogo.png",
+                height: 50,
+              ),
+              Image.asset(
+                "assets/images/ig.jpg",
+                height: 50,
+              ),
+              Image.asset(
+                "assets/images/lkd1.png",
+                height: 50,
+              ),
+            ],
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          const Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: SizedBox(
-                  height: 20,
-                  width: 20,
-                  child: Image.asset("assets/images"),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Container(
-                  color: Colors.lightGreen[200],
-                  height: 20,
-                  width: 20,
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Container(
-                  color: Colors.lightGreen[300],
-                  height: 20,
-                  width: 20,
-                ),
+              Text("Don't have account?"),
+              Text(
+                "  Sign up",
+                style: TextStyle(color: Colors.pink),
               ),
             ],
           )
